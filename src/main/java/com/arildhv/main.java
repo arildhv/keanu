@@ -1,7 +1,5 @@
 package com.arildhv;
 
-import org.json.JSONObject;
-
 public class main {
     public static void main(String[] args) {
         String key = "b8663d389735608463f9334969f3f89d";
@@ -9,8 +7,17 @@ public class main {
 
         apicaller caller = new apicaller(key, keanuId);
 
-        String birthdate = caller.getBirthdate();
+        String birthDate = caller.getBirthdate();
+        datechecker checker = new datechecker();
 
-        System.out.println(caller.getBirthdate());
+        if(birthDate.equals("")) {
+            System.out.println("An error occured.");
+        }
+        else if (checker.checkBirthday(birthDate)) {
+            System.out.println("It is Keanus birthday!");
+        }
+        else {
+            System.out.println("It is not Keanus birthday.");
+        }
     }
 }
