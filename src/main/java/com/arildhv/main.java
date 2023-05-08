@@ -2,7 +2,7 @@ package com.arildhv;
 
 public class main {
     public static void main(String[] args) {
-        String key = "b8663d389735608463f9334969f3f89d";
+        String key = "";
         String keanuId = "6384";
 
         apicaller caller = new apicaller(key, keanuId);
